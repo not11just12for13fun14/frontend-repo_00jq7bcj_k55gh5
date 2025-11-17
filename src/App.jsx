@@ -1,26 +1,24 @@
-import { useState } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Features from './components/Features'
+import Trust from './components/Trust'
+import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
+    <div className="min-h-screen bg-[#050B0A]">
+      <div className="pointer-events-none fixed inset-0 opacity-[0.15]" aria-hidden>
+        <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_20%_0%,rgba(16,185,129,0.25)_0%,rgba(16,185,129,0)_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(50%_60%_at_80%_10%,rgba(16,185,129,0.18)_0%,rgba(16,185,129,0)_60%)]" />
       </div>
+
+      <Navbar />
+      <main>
+        <Hero />
+        <Features />
+        <Trust />
+      </main>
+      <Footer />
     </div>
   )
 }
